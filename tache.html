@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Todo List </title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Ma Todo List </h1>
+
+  <!-- AUTH -->
+  <div id="auth">
+    <input type="text" id="nom" placeholder="Ton nom complet">
+    <input type="email" id="email" placeholder="Ton email">
+    <input type="password" id="motdepasse" placeholder="Mot de passe">
+
+    <button onclick="register()">
+      <i class="fa-solid fa-pen-to-square"></i> S'inscrire
+    </button>
+
+    <button onclick="seconnecter()">
+      <i class="fa-solid fa-house-signal"></i> Se connecter
+    </button>
+  </div>
+
+  <button onclick="resetPassword()">Mot de passe oublié
+    <i class="fa-solid fa-key"></i>
+  </button>
+
+  <!-- APP -->
+  <div id="app" style="display:none;">
+    <h2 id="welcome"></h2>
+
+    <input type="text" id="taskTitle" placeholder="Ajouter une tâche">
+    <button onclick="ajouterTache()">Ajouter</button>
+
+    <ul id="taskList"></ul>
+
+    <button class="logout" onclick="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i> Déconnexion
+    </button>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
